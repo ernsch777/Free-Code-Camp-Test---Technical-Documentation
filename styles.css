@@ -2,6 +2,41 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 50rem;
+    margin: 0 auto;
 }
 
+#main-doc {
+    max-width: 80rem;
+    border: 2px solid red;
+    height: 20rem;
+}
 
+#navbar {
+    max-width: 20rem;
+    border: 2px solid red;
+}
+
+.outer {
+    background-color: red;
+    border: 2px solid black;
+    margin-top: 10rem;
+    height: 400px;
+    width: 400px;
+    /* position: relative; */
+}
+.inner {
+    background-color: blue;
+    border: 2px solid white;
+    width: 160px;
+    height: 10rem;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;  */
+}
