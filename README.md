@@ -1,1 +1,2 @@
-1. Drew up the basic body and navbar divs and article structures. Need to get a source of good code technical documentation and start linking up the <p> text next. 
+1. Drew up the basic body and navbar divs and article structures. Need to get a source of good code technical documentation and start linking up the <p> text next.
+2. Spent a lot of time working on centering and layout options with gridbox and non grid/flex options for positioning and centering elements and content. I like a 2 pixel red border to help see the layouts but I might move to a less harsh option soon :) .
