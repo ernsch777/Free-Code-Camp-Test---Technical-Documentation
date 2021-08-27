@@ -3,40 +3,91 @@ body {
     margin: 0;
     box-sizing: border-box;
     max-width: 50rem;
-    margin: 0 auto;
+    min-width: 20rem;
 }
 
 #main-doc {
-    max-width: 80rem;
-    border: 2px solid red;
-    height: 20rem;
+    position: absolute;
+    margin-left: 22rem;
+    max-width: 60rem;
+    padding: 1rem;
+    margin-bottom: 10rem;
 }
 
 #navbar {
-    max-width: 20rem;
-    border: 2px solid red;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 20rem;
+    border-right: 2px solid;
 }
 
-.outer {
-    background-color: red;
-    border: 2px solid black;
-    margin-top: 10rem;
-    height: 400px;
-    width: 400px;
-    /* position: relative; */
+#navbar header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding: 10px;
 }
-.inner {
-    background-color: blue;
-    border: 2px solid white;
-    width: 160px;
-    height: 10rem;
-    /* position: absolute; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    /* top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;  */
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    border-bottom: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#main-doc header {
+    text-align: left;
+    color: black;
+    font-size: 1.8em;
+    font-weight: thin;
+}
+
+section article {
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.blue{
+    color: blue;
+}
+@media only screen and (max-width: 845px) {
+    #navbar {
+        width: 100%;
+        position: absolute;
+    }
+    #main-doc {
+        position: relative;
+        margin-left: 1rem;
+        margin-top: 21rem;
+    }
 }

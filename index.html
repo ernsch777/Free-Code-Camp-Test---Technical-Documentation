@@ -3,106 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boostrap Carousel Technical Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav id="navbar">
-        <header></header>
+        <header>Bootstrap Carousel</header>
         <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#How_It_Works">How It Works</a></li>
+            <li><a class="nav-link" href="#Slide_Only_Version">Slide Only Version</a></li>
+            <li><a class="nav-link" href="#With_Controls">With Controls</a></li>
+            <li><a class="nav-link" href="#With_Indicators_and_Captions">With Indicators and Captions</a></li>
         </ul>
     </nav>
-    <div id="main-doc">
-        <section class="main-section" id="first_subject">
-            <header>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>The carousel component within Bootstrap is a slideshow component for cycling through elements—images or slides of text—like a carousel spins or flips through them.</p>
+                <p>Some of the use cases for Bootstrap Carousels are:
+                </p>
+                <ul>
+                    <li>
+                    A great showcase item for a main website page. 
+                    </li>
+                    <li>
+                    A way to display multiple pieces content quickly.
+                    </li>
+                    <li>
+                    Allows the user to quickly pull up relevant content. 
+                    </li>
+                    <li>
+                    Makes the website more dynamic.
+                    </li>
+                    <li>
+                    Draws visitor interest.
+                    </li>
+                </ul>
+                <p>ALSO NOTE: The transition duration of .carousel-item can be changed with the $carousel-transition-duration Sass variable before compiling or custom styles if you’re using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. transition: transform 2s ease, opacity .5s ease-out).</p>
+            </article>
+        </section>
+        <section class="main-section" id="How_It_Works">
+            <header>How It Works</header>
                 <article>
                     <p>
-
+                        The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
                     </p>
-                    <code>
-
-                    </code>
-                    <li>
-
-                    </li>
+                    <p>
+                        In browsers where the Page Visibility API is supported, the carousel will avoid sliding when the webpage is not visible to the user (such as when the browser tab is inactive, the browser window is minimized, etc.).
+                    </p>
                 </article>
-            </header>
         </section>
-    <div id="main-doc">
-        <section class="main-section" id="first_subject">
-            <header>
+        <section class="main-section" id="Slide_Only_Version">
+            <header>Slide Only Version</header>
                 <article>
                     <p>
-
+                        Here’s a carousel with slides only. Note the presence of the .d-block and .w-100 on carousel images to prevent browser default image alignment.
                     </p>
                     <code>
-
+                        &lt;div <span class="blue">id</span>="carouselExampleSlidesOnly" <span class="blue">class</span>="carousel slide" <span class="blue">data-bs-ride</span>="carousel"&gt;<br>
+                        &lt;div <span class="blue">class</span>="carousel-inner"&gt;<br>
+                        &lt;div <span class="blue">class</span>="carousel-item active"&gt;<br>
+                            &lt;img <span class="blue">src</span>="..." class="d-block w-100" <span class="blue">alt</span>="..."&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;div <span class="blue">class</span>="carousel-item"&gt;<br>
+                            &lt;img <span class="blue">src</span>="..." <span class="blue">class</span>="d-block w-100" <span class="blue">alt</span>="..."&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;div <span class="blue">class</span>="carousel-item"&gt;<br>
+                            &lt;img <span class="blue">src</span>="..." class="d-block w-100" <span class="blue">alt</span>="..."&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;/div&gt;
                     </code>
-                    <li>
-
-                    </li>
                 </article>
-            </header>
         </section>
-    <div id="main-doc">
-        <section class="main-section" id="first_subject">
-            <header>
+        <section class="main-section" id="With_Controls">
+            <header>With Controls</header>
                 <article>
-                    <p>
-
-                    </p>
+                    <p>Adding in the previous and next controls. We recommend using &lt;button&gt; elements, but you can also use &lt;a&gt; elements with role="button". </p>
                     <code>
-
+                        &lt;div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"&gt;
+                        &lt;div class="carousel-inner"&gt;
+                        &lt;div class="carousel-item active"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                        &lt;/div&gt;
+                        &lt;div class="carousel-item"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                        &lt;/div&gt;
+                        &lt;div class="carousel-item"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                        &lt;/div&gt;
+                        &lt;/div&gt;
                     </code>
-                    <li>
-
-                    </li>
+                    <p>And the second half of this one is:</p>
+                    <code>
+                        &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"&gt;
+                        &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"&gt;
+                        &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    </code>
                 </article>
-            </header>
         </section>
-    <div id="main-doc">
-        <section class="main-section" id="first_subject">
-            <header>
+        <section class="main-section" id="With_Indicators_and_Captions">
+            <header>With Indicators and Captions</header>
                 <article>
-                    <p>
-
-                    </p>
+                    <p>You can also add the indicators to the carousel, alongside the controls, too.</p>
                     <code>
-
+                        &lt;div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"&gt;
+                        &lt;div class="carousel-indicators"&gt;
+                            &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+                            &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+                            &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="carousel-inner"&gt;
+                            &lt;div class="carousel-item active"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                            &lt;/div&gt;
+                            &lt;div class="carousel-item"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                            &lt;/div&gt;
+                            &lt;div class="carousel-item"&gt;
+                            &lt;img src="..." class="d-block w-100" alt="..."&gt;
+                            &lt;/div&gt;
                     </code>
-                    <li>
-
-                    </li>
-                </article>
-            </header>
-        </section>
-    <div id="main-doc">
-        <section class="main-section" id="first_subject">
-            <header>
-                <article>
-                    <p>
-
-                    </p>
+                    <p>And the second half of this one is:</p>
                     <code>
-
+                        &lt;/div&gt;
+                        &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"&gt;
+                        &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"&gt;
+                        &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;/div&gt;
                     </code>
-                    <li>
-
-                    </li>
                 </article>
-            </header>
         </section>
-    </div>
-    <div class="outer">
-        <!-- <p>test</p> -->
-        <div class="inner">
-            <!-- <p>test2</p> -->
-        </div>
-    </div>
+    </main>
 </body>
 </html>
